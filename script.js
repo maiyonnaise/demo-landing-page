@@ -2,10 +2,9 @@ const closeBtn = document.querySelector('.nav-close-btn')
 const openBtn = document.querySelector('.nav-open-btn')
 const navbar = document.querySelector('.navbar')
 const header = document.querySelector('.header')
-const forwardBtns = document.getElementsByClassName('forward-btn')
-
-const backBtns = document.getElementsByClassName('back-btn')
-
+const backBtn = document.querySelector('#back-btn')
+const forwardBtn = document.querySelector('#forward-btn')
+const clientPhotoContainer = document.querySelector('.client-photo-container')
 
 closeBtn.addEventListener('click', closeSidebar)
 openBtn.addEventListener('click', () => {
@@ -26,8 +25,11 @@ window.onscroll = () => {
   }
 }
 
-window.addEventListener('resize', () => {
-  // if (window.innerWidth >= 1024) {
-  //   console.log(forwardBtns)
-  // }
-})
+backBtn.onclick = () => {
+  console.log('back')
+  clientPhotoContainer.scrollLeft -= 35
+
+}
+forwardBtn.onclick = () => {
+  clientPhotoContainer.scrollLeft += 35
+}
