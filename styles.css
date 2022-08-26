@@ -393,12 +393,7 @@ a {
 }
 
 .wave-vector-container {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: -29rem;
-  left: -16rem;
-  transform: scale(1);
+  display: none;
 
 }
 
@@ -500,9 +495,11 @@ a {
   }
 
   .wave-vector-container {
+    display: inline-block;
+    position: absolute;
     z-index: 1;
     top: -45rem;
-    left: -16rem;
+    right: 1rem;
     transform: scale(.8);
 
   }
@@ -522,7 +519,7 @@ a {
     align-items: flex-start;
     justify-content: end;
     width: 55%;
-    padding-bottom: var(--gap-1);
+    /* padding-bottom: var(--gap-1); */
   }
 
   .btn-container {
